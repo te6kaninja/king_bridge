@@ -5,6 +5,9 @@ local resource <const> = GetConvar('kbridge:textUI', 'ox')
 function kbridge.showTextUI(text, data)
     if text then
         if resource == 'ox' then
+            if data and data?.key then
+                text = ('[%s] %s'):format(data.key or 'E', text)
+            end
             lib.showTextUI(text, data)
         elseif resource == 'ls' and data then
             exports.ls_textui:showTextUI(data.id, data.key, text)
