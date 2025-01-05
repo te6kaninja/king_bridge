@@ -59,14 +59,3 @@ local bridge = setmetatable({}, {
 })
 
 _ENV.bridge = bridge
-
-RegisterCommand('bridge:notify', function()
-    bridge.notify({
-        title = 'Test',
-        subTitle = 'Test',
-        description = 'Test',
-        duration = 5000,
-        type = 'success',
-        position = 'top-right'
-    })
-end)
