@@ -1,0 +1,1 @@
+RegisterNetEvent('king_bridge:notify', bridge.notify)

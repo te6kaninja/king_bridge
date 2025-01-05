@@ -5,7 +5,7 @@ use_experimental_fxv2_oal 'yes'
 
 name 'king_bridge'
 author 'gadget2'
-description 'A bridge that helps with framework compatibility'
+description 'A bridge that helps with fivem resource compatibility'
 version '0.0.1'
 
 shared_scripts {
@@ -13,14 +13,18 @@ shared_scripts {
     'core/shared.lua'
 }
 
+client_scripts {
+    'core/**/client.lua'
+}
+
 server_scripts {
-    'code/core/**/server.lua'
+    'core/**/server.lua'
 }
 
 files {
     'locales/*.json',
-    'config/**',
-    'code/modules/**'
+    'modules/**',
+    'api.lua'
 }
 
 dependency 'ox_lib'

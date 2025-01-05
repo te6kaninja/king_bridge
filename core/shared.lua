@@ -1,0 +1,3 @@
+_ENV.bridge = setmetatable({}, {
+    
+})
