@@ -2,7 +2,7 @@ local resource <const> = GetConvar('kbridge:textUI', 'ox')
 
 ---@param text string
 ---@param data table?
-function kbridge.showTextUI(text, data)
+function bridge.showTextUI(text, data)
     if text then
         if resource == 'ox' then
             if data and data?.key then
@@ -16,7 +16,7 @@ function kbridge.showTextUI(text, data)
 end
 
 ---@param id any
-function kbridge.hideTextUI(id)
+function bridge.hideTextUI(id)
     if resource == 'ox' then
         lib.hideTextUI()
     elseif resource == 'ls' and id then
@@ -26,7 +26,7 @@ end
 
 -- Works only with text UIs that support it themselves
 ---@return any[] | table?
-function kbridge.getTextUIs()
+function bridge.getTextUIs()
     if resource == 'ls' then
         return exports.ls_textui:getTextUIs()
     end
