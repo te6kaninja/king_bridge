@@ -2,11 +2,11 @@ local resource <const> = GetConvar('kbridge:progressBar', 'ox')
 
 function bridge.progressBar(data)
     if resource == 'ox' then
-        lib.progressBar(data)
+        return lib.progressBar(data)
     elseif resource == 'oxCircle' then
-        lib.progressBarCircle(data)
+        return lib.progressBarCircle(data)
     elseif resource == 'ls' then
-        exports.ls_progressbar:progressBar(data)
+        return exports.ls_progressbar:progressBar(data)
     end
 end
 
