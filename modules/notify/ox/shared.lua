@@ -1,11 +1,9 @@
-if cache.context == 'client' then
-    local resource <const> = GetConvar('kbridge:notifications', 'ox')
-
+if bridge.context == 'client' then
     ---@param data table
     ---@diagnostic disable-next-line: duplicate-set-field
     function bridge.notify(data)
         if resource == 'ox' then
-            lib.notify(data)
+            exports.ox_lib:notify(data)
         end
     end
 
@@ -20,3 +18,5 @@ else
         end
     end
 end
+
+return bridge.notify

@@ -8,7 +8,7 @@ function bridge.showTextUI(text, data)
             if data and data?.key then
                 text = ('[%s] %s'):format(data.key or 'E', text)
             end
-            lib.showTextUI(text, data)
+            exports.ox_lib:showTextUI(text, data)
         elseif resource == 'ls' and data then
             exports.ls_textui:showTextUI(data.id, data.key, text)
         end
@@ -18,7 +18,7 @@ end
 ---@param id any
 function bridge.hideTextUI(id)
     if resource == 'ox' then
-        lib.hideTextUI()
+        exports.ox_lib:hideTextUI()
     elseif resource == 'ls' and id then
         exports.ls_textui:hideTextUI(id)
     end

@@ -1,6 +1,6 @@
 -- Based on the https://github.com/overextended/ox_lib/blob/master/init.lua
 
-local resource <const>, context <const> = 'king_bridge', lib.context
+local resource <const>, context <const> = 'king_bridge', IsDuplicityVersion() and 'server' or 'client'
 local function loadModule(self, name)
     local directory <const> = ('modules/%s'):format(name)
     local basePath <const> = ('%s/%s.lua'):format(directory, context)
